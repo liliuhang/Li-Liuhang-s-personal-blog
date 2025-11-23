@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://hive.forms.usercontent.microsoft/Images/9188040d-6c67-4c5b-b112-36a304b66dad/00000000-0000-0000-0003-bffd409131bf/T0RRH45M4BJGVXSCOEE2GS5JAZ/386e9d40-41d5-440e-acdb-b375215b7188" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - 页面未找到</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #e0e0e0;
+            padding: 20px 0; /* 增加上下内边距，避免内容贴边 */
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(25, 25, 45, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 90%;
+            animation: fadeIn 0.8s ease-out;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .error-code {
+            font-size: 10rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #6dd5fa 0%, #2980b9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 15px rgba(109, 213, 250, 0.3);
+            position: relative;
+        }
+
+        .error-code::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #6dd5fa, transparent);
+            border-radius: 50%;
+        }
+
+        .error-title {
+            font-size: 2rem;
+            margin: 30px 0 20px;
+            color: #f0f0f0;
+        }
+
+        .error-message {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #b0b0c0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px; /* 增加按钮组底部间距 */
+        }
+
+        .btn {
+            padding: 12px 30px;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .back-home {
+            background: linear-gradient(135deg, #6dd5fa 0%, #2980b9 100%);
+            box-shadow: 0 4px 15px rgba(109, 213, 250, 0.2);
+        }
+
+        .back-prev {
+            background: linear-gradient(135deg, #8e44ad 0%, #3498db 100%);
+            box-shadow: 0 4px 15px rgba(142, 68, 173, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(109, 213, 250, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        .copyright {
+            margin-top: auto; /* 自动推到容器底部 */
+            font-size: 0.9rem;
+            color: #888;
+            text-align: center;
+            padding: 20px 0 10px; /* 增加顶部内边距，与按钮保持距离 */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(109, 213, 250, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(109, 213, 250, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(109, 213, 250, 0); }
+        }
+
+        .error-container:hover .error-code {
+            animation: pulse 2s infinite;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            .error-title {
+                font-size: 1.5rem;
+            }
+            .button-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .btn {
+                width: 100%;
+                padding: 12px 20px;
+            }
+            .copyright {
+                font-size: 0.8rem;
+                padding: 15px 0 5px;
+            }
+            .error-container {
+                padding: 30px 20px; /* 减小移动设备上的内边距 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">哎呀！页面走丢了</h1>
+        <p class="error-message">
+            页面似乎被宇宙黑洞吞噬了，<br>
+            可能是地址错误/页面已被移除，<br>
+            别担心，我们带您回到安全地带~
+        </p>
+        <div class="button-group">
+            <a href="https://yongmukeji.top" class="btn back-home">返回永慕智创软件工作室（永慕科技）官网</a>
+            <button class="btn back-prev" onclick="window.history.back()">返回上一页</button>
+        </div>
+        <!-- 将版权信息移至容器内，避免绝对定位导致的重叠 -->
+        <div class="copyright">
+            © 2025-present 昆象云科技、永慕智创软件工作室（永慕科技）版权所有
+        </div>
+    </div>
+</body>
+</html>
